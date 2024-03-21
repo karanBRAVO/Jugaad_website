@@ -12,7 +12,7 @@ const Home = (props: Props) => {
         </div>
         <div className="w-full h-screen overflow-y-auto bg-black text-white">
           {/* Header */}
-          <div className="w-full bg-red-400 h-screen">
+          <div className="w-full bg-black h-screen">
             <Navbar />
           </div>
 
