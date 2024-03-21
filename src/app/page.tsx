@@ -1,5 +1,5 @@
 import React from "react";
-import { Sidebar } from "@/ui/ComponentExporter";
+import { Footer, Navbar, Sidebar, Slider } from "@/ui/ComponentExporter";
 
 type Props = {};
 
@@ -10,7 +10,27 @@ const Home = (props: Props) => {
         <div className="h-screen flex items-center justify-center bg-white shadow-md">
           <Sidebar />
         </div>
-        <div className="w-full h-screen overflow-y-auto bg-black text-white"></div>
+        <div className="w-full h-screen overflow-y-auto bg-black text-white">
+          {/* Header */}
+          <div className="w-full bg-red-400 h-screen">
+            <Navbar />
+          </div>
+
+          {/* Main */}
+          <div className="w-full min-h-screen bg-yellow-600">
+            {/* Info's */}
+            Info
+            {/* Carousels */}
+            <div className="w-full">
+              <Slider />
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div>
+            <Footer />
+          </div>
+        </div>
       </section>
     </>
   );
