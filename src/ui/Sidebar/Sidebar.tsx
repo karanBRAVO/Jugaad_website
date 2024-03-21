@@ -16,21 +16,22 @@ const Sidebar = (props: Props) => {
     {
       name: "Instagram",
       iconName: FaSquareInstagram,
-      linkTo: "https://LinkTo.com",
+      linkTo: "https://instagram.com",
     },
-    { name: "Twitter", iconName: FaTwitter, linkTo: "https://LinkTo.com" },
-    { name: "Discord", iconName: FaDiscord, linkTo: "https://LinkTo.com" },
-    { name: "Telegram", iconName: FaTelegram, linkTo: "https://LinkTo.com" },
+    { name: "Twitter", iconName: FaTwitter, linkTo: "https://twitter.com" },
+    { name: "Discord", iconName: FaDiscord, linkTo: "https://discord.com" },
+    { name: "Telegram", iconName: FaTelegram, linkTo: "https://telegram.com" },
   ];
 
   return (
     <>
-      <h1 className="text-pink-600 text-9xl">k</h1>
-      {links.map((link, idx) => (
-        <Link href={link.linkTo} key={idx} className="bg-green-500 p-5">
-          <link.iconName className="text-white font-black" />
-        </Link>
-      ))}
+      <aside className="flex flex-col items-center justify-center bg-white py-2">
+        {links.map((link, idx) => (
+          <Link href={link.linkTo} key={idx} className="px-3 py-7">
+            <link.iconName className="text-black text-3xl font-black hover:text-red-700 transition-all ease-linear" />
+          </Link>
+        ))}
+      </aside>
     </>
   );
 };
