@@ -16,7 +16,7 @@ const Navbar = (props: Props) => {
 
   return (
     <>
-      <div className="w-full p-5 flex items-center justify-between">
+      <div className="w-full p-5 flex items-center justify-between border-2 border-solid border-slate-400 border-t-0 border-l-0 border-r-0">
         <Image
           src={"/logo.jpg"}
           alt="Logo"

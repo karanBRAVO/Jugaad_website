@@ -1,5 +1,11 @@
 import React from "react";
-import { Footer, Navbar, Sidebar, Slider } from "@/ui/ComponentExporter";
+import {
+  Footer,
+  MastHead,
+  Navbar,
+  Sidebar,
+  Slider,
+} from "@/ui/ComponentExporter";
 
 type Props = {};
 
@@ -14,6 +20,7 @@ const Home = (props: Props) => {
           {/* Header */}
           <div className="w-full bg-black h-screen">
             <Navbar />
+            <MastHead />
           </div>
 
           {/* Main */}
