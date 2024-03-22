@@ -5,7 +5,7 @@ type Props = {};
 const Info = (props: Props) => {
   return (
     <>
-      <div>Info</div>
+      <div className="w-full">Info</div>
     </>
   );
 };
