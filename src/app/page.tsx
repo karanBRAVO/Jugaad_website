@@ -25,7 +25,7 @@ const Home = (props: Props) => {
           </div>
 
           {/* Main */}
-          <div className="w-full min-h-screen bg-yellow-600">
+          <div className="w-full min-h-screen bg-zinc-900">
             {/* Info's */}
             <Info />
             {/* Carousels */}
