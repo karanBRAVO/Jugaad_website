@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Footer,
+  Info,
   MastHead,
   Navbar,
   Sidebar,
@@ -26,7 +27,7 @@ const Home = (props: Props) => {
           {/* Main */}
           <div className="w-full min-h-screen bg-yellow-600">
             {/* Info's */}
-            Info
+            <Info />
             {/* Carousels */}
             <div className="w-full">
               <Slider />
@@ -34,7 +35,7 @@ const Home = (props: Props) => {
           </div>
 
           {/* Footer */}
-          <div>
+          <div className="w-full p-1">
             <Footer />
           </div>
         </div>
