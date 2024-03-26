@@ -1,11 +1,34 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Inter, Inika } from "next/font/google";
+
+// fonts
+const f_inter_800 = Inter({
+  weight: "800",
+  subsets: ["latin"],
+  display: "swap",
+});
+const f_inter_400 = Inter({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+const f_inika_700 = Inika({
+  weight: "700",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 type Props = {};
 
+interface NavigationLinks {
+  name: string;
+  to: string;
+}
+
 const Footer = (props: Props) => {
-  const links = [
+  const links: NavigationLinks[] = [
     { name: "Home", to: "/" },
     { name: "About Us", to: "/aboutus" },
     { name: "Workshops", to: "/workshops" },
@@ -14,64 +37,58 @@ const Footer = (props: Props) => {
 
   return (
     <>
-     <footer className="relative bg-blueGray-200 pt-8 pb-6">
-  <div className="container mx-auto px-4">
-    <div className="flex flex-wrap text-left lg:text-left">
-      <div className="w-full lg:w-6/12 m-100">
-        <img src="./logo.jpg"></img>
-      </div>
-      <div className="w-full lg:w-6/12 px-0">
-        <div className="flex flex-wrap items-top mb-6">
-          <div className="w-full lg:w-4/12 px-4 ml-auto">
-            <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
-            <ul className="list-unstyled">
-              <li>
-                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">About Us</a>
-              </li>
-              <li>
-                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">Home</a>
-              </li>
-              <li>
-                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">Workshops</a>
-              </li>
-              <li>
-                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">Projects</a>
-              </li>
-            </ul>
-          </div>
-          <div className="w-full lg:w-4/12 px-4">
-            <ul className="list-unstyled">
-              <li>
-                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-0 text-sm"><span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2"><u>Email Address</u></span></a>
-              </li>
-              <li>
-                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">juggadclubuiet@gmail.com</a>
-              </li>
-              <li>
-                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-0 text-sm"><span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2"><u>Phone Number</u></span></a>
-              </li>
-              <li>
-                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-0 text-sm">Pranav - 8427311044</a>
-              </li>
-              <li>
-                <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">Kunal- 8604329827</a>
-              </li>
-            </ul>
-          </div>
+      <div className="w-full flex flex-row items-center justify-between px-10 py-4">
+        <div className="flex flex-col items-center justify-center gap-1">
+          <Link href={"/"}>
+            <Image
+              src={"/Logo_foot.png"}
+              alt="Logo"
+              width={100}
+              height={100}
+              className="m-1 w-64"
+            />
+            <h1
+              className={`text-white text-xl tracking-wider font-bold uppercase text-center ${f_inter_800.className}`}
+            >
+              Jugaad
+            </h1>
+          </Link>
+        </div>
+        <div className="flex flex-col items-start justify-start">
+          {links.map((link, idx) => (
+            <Link
+              href={link.to}
+              key={idx}
+              className={`font-medium text-white m-1 p-1 text-base leading-6 tracking-wide uppercase ${f_inika_700.className}`}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+        <div className="flex flex-col items-start justify-between">
+          <h3
+            className={`underline text-white font-medium text-xl tracking-wide leading-7 capitalize ${f_inter_800.className}`}
+          >
+            Email Address
+          </h3>
+          <p
+            className={`${f_inter_400.className} flex flex-col items-start justify-start leading-6 text-base font-light text-white p-1`}
+          >
+            <span>jugaadclubuiet@gmail.com</span>
+          </p>
+          <h3
+            className={`underline text-white font-medium text-xl tracking-wide leading-7 capitalize ${f_inter_800.className}`}
+          >
+            Phone Number
+          </h3>
+          <p
+            className={`${f_inter_400.className} flex flex-col items-start justify-start leading-6 text-base font-light text-white p-1`}
+          >
+            <span>Pranav - 8427311044 </span>
+            <span>Kunal - 8604329827</span>
+          </p>
         </div>
       </div>
-    </div>
-    <hr className="my-6 border-blueGray-300"/>
-    <div className="flex flex-wrap items-center md:justify-between justify-center">
-      <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-        <div className="text-sm text-blueGray-500 font-semibold py-1">
-          Copyright © <span id="get-current-year">2023</span><a href="https://www.juggad.com" className="text-blueGray-500 hover:text-gray-800" target="_blank"/> Juggad Robotics Club
-          <a className="text-blueGray-500 hover:text-blueGray-800"></a>.
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
     </>
   );
 };
