@@ -30,7 +30,10 @@ const CustomSlider = (props: Props) => {
     <>
       <div className="w-full p-3 flex flex-col items-center my-8">
         <h1
-          className={`text-6xl font-extrabold text-white my-1 leading-3 tracking-tight ${f_alata_400.className} p-5 my-5`}
+          className={`text-7xl font-extrabold text-white my-1 leading-3 tracking-tight ${f_alata_400.className} p-5 my-5`}
+          style={{
+            WebkitTextStroke: "2.5px black",
+          }}
         >
           {props.title}
         </h1>
