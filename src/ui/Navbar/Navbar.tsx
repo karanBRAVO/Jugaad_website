@@ -51,7 +51,7 @@ const Navbar = (props: Props) => {
             <Link
               href={link.to}
               key={idx}
-              className={`uppercase font-semibold text-white mx-5 text-2xl hover:line-through hover:text-red-700 transition-all ease-in-out tracking-normal leading-tight ${f_inter_700.className}`}
+              className={`uppercase font-semibold text-white mx-5 text-xl hover:line-through hover:text-red-700 transition-all ease-in-out tracking-normal leading-tight ${f_inter_700.className}`}
             >
               {link.name}
             </Link>
