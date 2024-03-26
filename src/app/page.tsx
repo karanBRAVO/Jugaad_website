@@ -19,13 +19,27 @@ const Home = (props: Props) => {
         </div>
         <div className="w-full h-screen overflow-y-auto bg-black text-white">
           {/* Header */}
-          <div className="w-full bg-black h-screen">
+          <div
+            className="w-full bg-black h-screen"
+            style={{
+              background: "url('/bgImg.png')",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
             <Navbar />
             <MastHead />
           </div>
 
           {/* Main */}
-          <div className="w-full min-h-screen bg-zinc-900">
+          <div
+            className="w-full min-h-screen bg-zinc-900"
+            style={{
+              background: "url('/bgImg.png')",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
             {/* Info's */}
             <Info />
             {/* Carousels */}
@@ -35,7 +49,7 @@ const Home = (props: Props) => {
           </div>
 
           {/* Footer */}
-          <div className="w-full p-1">
+          <div className="w-full p-1 bg-black border-2 border-solid border-black">
             <Footer />
           </div>
         </div>
