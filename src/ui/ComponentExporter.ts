@@ -1,3 +1,4 @@
+export { default as HomeLayout } from "./Home/Home";
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as MastHead } from "./Masthead/Masthead";
 export { default as Info } from "./Info/Info";
