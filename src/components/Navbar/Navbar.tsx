@@ -1,17 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Inter } from "next/font/google";
-
-// icons
+import { f_inter_700 } from "@/styles/fonts";
 import { FaSearch } from "react-icons/fa";
-
-// fonts
-const f_inter_700 = Inter({
-  weight: "700",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 type Props = {};
 

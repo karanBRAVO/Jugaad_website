@@ -6,7 +6,7 @@ import {
   Navbar,
   Sidebar,
   Slider,
-} from "@/ui/ComponentExporter";
+} from "@/components/ComponentExporter";
 
 type Props = {};
 

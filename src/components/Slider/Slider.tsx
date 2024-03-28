@@ -6,24 +6,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
-import { Alata, Amaranth } from "next/font/google";
+import { f_amaranth_400, f_alata_400 } from "@/styles/fonts";
 
 type Props = {
   title: string;
   images: { src: string; alt: string; title: string }[];
 };
-
-// fonts
-const f_alata_400 = Alata({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-const f_amaranth_400 = Amaranth({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const CustomSlider = (props: Props) => {
   return (

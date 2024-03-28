@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { IconType } from "react-icons";
-
-// icons
 import {
   FaDiscord,
   FaSquareInstagram,

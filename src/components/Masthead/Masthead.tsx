@@ -1,24 +1,7 @@
 import React from "react";
-import { Judson, Kaisei_Opti, DM_Sans } from "next/font/google";
+import { f_judson_700, f_dmsans_700, f_kaiseiOpti_700 } from "@/styles/fonts";
 
 type Props = {};
-
-// fonts
-const f_judson_700 = Judson({
-  weight: "700",
-  subsets: ["latin"],
-  display: "swap",
-});
-const f_kaiseiOpti_700 = Kaisei_Opti({
-  weight: "700",
-  subsets: ["latin"],
-  display: "swap",
-});
-const f_dmsans_700 = DM_Sans({
-  weight: "700",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const Masthead = (props: Props) => {
   return (

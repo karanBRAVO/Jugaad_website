@@ -1,24 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Inter, Inika } from "next/font/google";
-
-// fonts
-const f_inter_800 = Inter({
-  weight: "800",
-  subsets: ["latin"],
-  display: "swap",
-});
-const f_inter_400 = Inter({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-const f_inika_700 = Inika({
-  weight: "700",
-  subsets: ["latin"],
-  display: "swap",
-});
+import { f_inter_800, f_inter_400, f_inika_700 } from "@/styles/fonts";
 
 type Props = {};
 

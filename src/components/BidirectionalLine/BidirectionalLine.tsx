@@ -1,17 +1,8 @@
 import React from "react";
-import { Alata } from "next/font/google";
 
 type Props = {};
 
-// fonts
-const f_alata_400 = Alata({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-// bi-directional arrow
-const BDLine = () => {
+const BidirectionalLine = (props: Props) => {
   return (
     <>
       <div className="w-full flex items-center justify-center p-2">
@@ -57,29 +48,4 @@ const BDLine = () => {
   );
 };
 
-const Info = (props: Props) => {
-  return (
-    <>
-      <div className="w-full p-3">
-        <BDLine />
-
-        <p
-          className={`text-white font-normal text-center text-xl leading-8 tracking-wider px-10 mx-9 my-5 ${f_alata_400.className}`}
-        >
-          At Jugaad, we believe in the limitless possibilities that emerge when
-          creativity meets technology. As the premier robotic club of UIET
-          College, we are dedicated to fostering a dynamic community of students
-          passionate about robotics, embedded systems, programming, 3D
-          designing, 3D printing, and various other cutting-edge technologies.
-          Our club serves as a hub for innovation, collaboration, and hands-on
-          learning, where students come together to explore, create, and push
-          the boundaries of what is possible in the world of technology.
-        </p>
-
-        <BDLine />
-      </div>
-    </>
-  );
-};
-
-export default Info;
+export default BidirectionalLine;
