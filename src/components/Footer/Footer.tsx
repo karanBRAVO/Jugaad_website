@@ -2,13 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { f_inter_800, f_inter_400, f_inika_700 } from "@/styles/fonts";
+import { NavigationLinks } from "@/types/Links";
 
 type Props = {};
-
-interface NavigationLinks {
-  name: string;
-  to: string;
-}
 
 const Footer = (props: Props) => {
   const links: NavigationLinks[] = [

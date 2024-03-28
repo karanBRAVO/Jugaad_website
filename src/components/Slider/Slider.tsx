@@ -7,10 +7,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import { f_amaranth_400, f_alata_400 } from "@/styles/fonts";
+import { Image } from "@/types/Image";
 
 type Props = {
   title: string;
-  images: { src: string; alt: string; title: string }[];
+  images: Image[];
 };
 
 const CustomSlider = (props: Props) => {

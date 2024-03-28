@@ -3,16 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { f_inter_700 } from "@/styles/fonts";
 import { FaSearch } from "react-icons/fa";
+import { NavigationLinks } from "@/types/Links";
 
 type Props = {};
 
-interface NavbarLinks {
-  name: string;
-  to: string;
-}
-
 const Navbar = (props: Props) => {
-  const links: NavbarLinks[] = [
+  const links: NavigationLinks[] = [
     { name: "Home", to: "/" },
     { name: "About", to: "/aboutus" },
     { name: "Activities", to: "/activities" },
