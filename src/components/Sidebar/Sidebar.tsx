@@ -28,7 +28,7 @@ const Sidebar = (props: Props) => {
 
   return (
     <>
-      <aside className="flex flex-col items-center justify-center bg-white py-2">
+      <aside className="flex flex-col items-center justify-center bg-white py-2 text-black">
         {links.map((link, idx) => (
           <Link href={link.to} key={idx} className="px-1 md:px-3 py-7">
             <link.iconName

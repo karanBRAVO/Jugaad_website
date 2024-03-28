@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import { f_amaranth_400, f_alata_400 } from "@/styles/fonts";
 import { ImageType } from "@/types/Image";
+import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 
 type Props = {
   title: string;
@@ -45,7 +46,7 @@ const CustomSlider = (props: Props) => {
           {props.title}
         </h1>
 
-        <div className="py-1 px-3 md:px-14 my-5 w-full h-full">
+        <div className="py-1 px-2 md:px-14 my-5 w-full h-full">
           <Swiper
             slidesPerView={isDesktop ? 3 : 1}
             spaceBetween={30}
@@ -53,7 +54,10 @@ const CustomSlider = (props: Props) => {
             pagination={{
               clickable: true,
             }}
-            navigation={true}
+            navigation={{
+              prevEl: ".prev",
+              nextEl: ".next",
+            }}
             modules={[Pagination, Navigation]}
             className="w-full h-full my-5"
           >
@@ -76,10 +80,32 @@ const CustomSlider = (props: Props) => {
                 />
               </SwiperSlide>
             ))}
+            <SlideNavigationButtons />
           </Swiper>
         </div>
       </div>
     </>
+  );
+};
+
+const SlideNavigationButtons = () => {
+  const swiper = useSwiper();
+
+  return (
+    <div className="flex w-full items-center justify-between my-10 absolute top-0 px-1 z-10">
+      <div
+        className="prev p-3 rounded-full bg-white w-fit cursor-pointer border-2 md:border-4 border-solid border-black"
+        onClick={() => swiper.slidePrev(1)}
+      >
+        <FaArrowLeftLong className="font-black text-black text-base md:text-xl" />
+      </div>
+      <div
+        className="next p-3 rounded-full bg-white w-fit cursor-pointer border-2 md:border-4 border-solid border-black"
+        onClick={() => swiper.slideNext()}
+      >
+        <FaArrowRightLong className="font-black text-black text-base md:text-xl" />
+      </div>
+    </div>
   );
 };
 
