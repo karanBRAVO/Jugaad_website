@@ -47,7 +47,7 @@ const CustomSlider = (props: Props) => {
 
         <div className="py-1 px-3 md:px-14 my-5 w-full h-full">
           <Swiper
-            slidesPerView={isDesktop ? 4 : 1}
+            slidesPerView={isDesktop ? 3 : 1}
             spaceBetween={30}
             loop={true}
             pagination={{
@@ -63,7 +63,7 @@ const CustomSlider = (props: Props) => {
                 className="bg-black border-4 border-solid border-white w-full h-full text-white flex items-center"
               >
                 <h5
-                  className={`${f_amaranth_400.className} text-2xl font-normal text-white text-center w-full bg-black p-5`}
+                  className={`${f_amaranth_400.className} text-nowrap text-2xl font-normal text-white text-center w-full bg-black p-5`}
                 >
                   {image.title}
                 </h5>

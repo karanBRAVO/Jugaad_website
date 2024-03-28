@@ -1,9 +1,7 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { f_inter_700 } from "@/styles/fonts";
-import { FaSearch } from "react-icons/fa";
 import { NavigationLinks } from "@/types/Links";
+import MobileNavbar from "./MobileNavbar";
+import DesktopNavbar from "./DesktopNavbar";
 
 type Props = {};
 
@@ -16,39 +14,8 @@ const Navbar = (props: Props) => {
 
   return (
     <>
-      <div className="w-full p-5 flex items-center justify-around">
-        <div className="flex flex-col items-center justify-center gap-1">
-          <Link href={"/"}>
-            <Image
-              src={"/Logo_head.png"}
-              alt="Logo"
-              width={100}
-              height={100}
-              className="m-1 w-36"
-            />
-            <h1
-              className={`text-white text-xl tracking-wider font-bold uppercase text-center ${f_inter_700.className}`}
-            >
-              Jugaad
-            </h1>
-          </Link>
-        </div>
-        <div className="flex flex-row items-center justify-between">
-          {links.map((link, idx) => (
-            <Link
-              href={link.to}
-              key={idx}
-              className={`uppercase font-semibold text-white mx-5 text-xl hover:line-through hover:text-red-700 transition-all ease-in-out tracking-normal leading-tight ${f_inter_700.className}`}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-        <FaSearch
-          className="text-white font-black text-3xl cursor-pointer mx-2 hover:text-red-700 hover:scale-110 transition-all ease-in"
-          title="Search Jugaad"
-        />
-      </div>
+      <MobileNavbar links={links} />
+      <DesktopNavbar links={links} />
     </>
   );
 };

@@ -45,7 +45,7 @@ const Masthead = (props: Props) => {
             </span>
           </h1>
           <h2
-            className={`text-white font-black text-base sm:text-xl md:text-3xl lg:text-6xl flex flex-row items-center justify-center w-full gap-2 sm:gap-3 md:gap-4 capitalize my-5 md:mb-24 p-2 self-end ${f_kaiseiOpti_700.className} leading-6 tracking-wide`}
+            className={`text-white font-black text-base sm:text-2xl md:text-3xl lg:text-6xl flex flex-row items-center justify-center w-full gap-2 sm:gap-3 md:gap-4 capitalize my-5 md:mb-24 p-2 self-end ${f_kaiseiOpti_700.className} leading-6 tracking-wide`}
           >
             <span
               style={{
