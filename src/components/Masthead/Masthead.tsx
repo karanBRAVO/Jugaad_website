@@ -1,22 +1,42 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { f_judson_700, f_dmsans_700, f_kaiseiOpti_700 } from "@/styles/fonts";
 
 type Props = {};
 
 const Masthead = (props: Props) => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkIsDesktop = () => {
+      setIsDesktop(window.matchMedia("(min-width: 960px)").matches);
+    };
+
+    checkIsDesktop();
+
+    const mediaQuery = window.matchMedia("(min-width: 960px)");
+    const handleResize = () => {
+      setIsDesktop(mediaQuery.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleResize);
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, []);
+
   return (
     <>
       <div className="w-full h-full flex items-center justify-center p-3">
         <div className="w-full flex flex-col items-center justify-between p-4">
           <h1
             style={{
-              WebkitTextStroke: "3px black",
+              WebkitTextStroke: !isDesktop ? "0.05px #000" : "3px #000",
             }}
-            className={`capitalize text-white font-black text-9xl w-full flex flex-col items-center justify-center gap-7 my-6 p-5 ${f_judson_700.className} leading-7 tracking-widest`}
+            className={`capitalize text-white font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl w-full flex flex-col items-center justify-center gap-7 my-6 p-5 ${f_judson_700.className} leading-7 tracking-widest`}
           >
             Jugaad
             <span
-              className={`font-black leading-none tracking-widest text-white text-4xl my-5 p-5 ${f_dmsans_700.className}`}
+              className={`font-black leading-none tracking-widest text-white text-xs sm:text-base md:text-2xl lg:text-3xl my-5 sm:p-5 ${f_dmsans_700.className} w-full text-center text-nowrap`}
               style={{
                 WebkitTextStroke: "0.05px black",
               }}
@@ -25,11 +45,11 @@ const Masthead = (props: Props) => {
             </span>
           </h1>
           <h2
-            className={`text-white font-black text-7xl flex flex-row items-center justify-center w-full gap-4 capitalize my-5 p-2 self-end ${f_kaiseiOpti_700.className} leading-6 tracking-wide`}
+            className={`text-white font-black text-base sm:text-xl md:text-3xl lg:text-6xl flex flex-row items-center justify-center w-full gap-2 sm:gap-3 md:gap-4 capitalize my-5 md:mb-24 p-2 self-end ${f_kaiseiOpti_700.className} leading-6 tracking-wide`}
           >
             <span
               style={{
-                WebkitTextStroke: "2px #302F2A",
+                WebkitTextStroke: !isDesktop ? "0.05px #302F2A" : "2px #302F2A",
               }}
             >
               Frugal
@@ -37,7 +57,7 @@ const Masthead = (props: Props) => {
             •
             <span
               style={{
-                WebkitTextStroke: "2px #302F2A",
+                WebkitTextStroke: !isDesktop ? "0.05px #302F2A" : "2px #302F2A",
               }}
             >
               Inclusive
@@ -45,7 +65,7 @@ const Masthead = (props: Props) => {
             •
             <span
               style={{
-                WebkitTextStroke: "2px #302F2A",
+                WebkitTextStroke: !isDesktop ? "0.05px #302F2A" : "2px #302F2A",
               }}
             >
               Flexible
