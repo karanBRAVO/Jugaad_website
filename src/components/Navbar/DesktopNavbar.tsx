@@ -19,14 +19,14 @@ const DesktopNavbar = (props: Props) => {
             <Link
               href={link.to}
               key={idx}
-              className={`uppercase font-semibold text-white mx-5 text-xl hover:line-through hover:text-red-700 transition-all ease-in-out tracking-normal leading-tight ${f_inter_700.className}`}
+              className={`uppercase font-semibold text-white mx-5 text-xl hover:text-yellow-500 transition-all ease-in-out tracking-normal leading-tight ${f_inter_700.className}`}
             >
               {link.name}
             </Link>
           ))}
         </div>
         <FaSearch
-          className="text-white font-black text-3xl cursor-pointer mx-2 hover:text-red-700 hover:scale-110 transition-all ease-in"
+          className="text-white font-black text-3xl cursor-pointer mx-2 hover:text-yellow-500 hover:scale-110 transition-all ease-in"
           title="Search Jugaad"
         />
       </div>

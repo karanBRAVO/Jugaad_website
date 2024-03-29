@@ -6,7 +6,14 @@ import {
   Kaisei_Opti,
   DM_Sans,
   Amaranth,
+  Montserrat,
 } from "next/font/google";
+
+export const f_montserrat_800 = Montserrat({
+  weight: "900",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const f_inter_800 = Inter({
   weight: "800",

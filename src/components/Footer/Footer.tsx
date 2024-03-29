@@ -16,7 +16,7 @@ const Footer = (props: Props) => {
 
   return (
     <>
-      <div className="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-10 py-4">
+      <div className="w-full flex flex-col md:flex-row items-center justify-around px-4 md:px-12 py-8">
         <div className="flex flex-col items-center justify-center gap-1">
           <Link href={"/"}>
             <Image
@@ -44,27 +44,27 @@ const Footer = (props: Props) => {
             </Link>
           ))}
         </div>
-        <div className="flex flex-col items-start justify-between">
-          <div className="my-2 md:my-0">
+        <div className="flex flex-col items-start justify-between w-full sm:w-fit">
+          <div className="my-2 md:my-0 w-full">
             <h3
-              className={`underline text-white font-medium text-base md:text-xl tracking-wide leading-7 capitalize ${f_inter_800.className}`}
+              className={`underline -rotate-12 sm:-rotate-0 origin-left text-white font-medium text-base md:text-xl tracking-wide leading-7 capitalize ${f_inter_800.className}`}
             >
               Email Address
             </h3>
             <p
-              className={`${f_inter_400.className} flex flex-col items-start justify-start leading-6 text-base font-light text-white p-1`}
+              className={`${f_inter_400.className} -rotate-12 sm:-rotate-0 origin-left flex flex-col items-end sm:items-start justify-start leading-6 text-base font-light text-white p-1`}
             >
               <span>jugaadclubuiet@gmail.com</span>
             </p>
           </div>
-          <div className="my-2 md:my-0">
+          <div className="my-2 md:my-0 w-full">
             <h3
-              className={`underline text-white font-medium text-base md:text-xl tracking-wide leading-7 capitalize ${f_inter_800.className}`}
+              className={`underline -rotate-12 sm:-rotate-0 origin-left text-white font-medium text-base md:text-xl tracking-wide leading-7 capitalize ${f_inter_800.className}`}
             >
               Phone Number
             </h3>
             <p
-              className={`${f_inter_400.className} flex flex-col items-start justify-start leading-6 text-base font-light text-white p-1`}
+              className={`${f_inter_400.className} -rotate-12 sm:-rotate-0 origin-left flex flex-col items-end sm:items-start justify-start w-full leading-6 text-base font-light text-white p-1`}
             >
               <span>Pranav - 8427311044 </span>
               <span>Kunal - 8604329827</span>

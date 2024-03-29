@@ -22,22 +22,22 @@ const MobileNavbar = (props: Props) => {
         <Logo />
         {menuStatus ? (
           <FaBars
-            className="text-white font-black text-xl cursor-pointer hover:text-red-500 transition-all hover:scale-105 ease-in"
+            className="text-white font-black text-xl cursor-pointer hover:text-yellow-500 transition-all hover:scale-105 ease-in"
             onClick={toggleMenu}
           />
         ) : (
           <>
             <FaTimes
-              className="text-white font-black text-xl cursor-pointer hover:text-red-800 transition-all hover:scale-105 ease-in"
+              className="text-white font-black text-xl cursor-pointer hover:text-yellow-500 transition-all hover:scale-105 ease-in"
               onClick={toggleMenu}
             />
-            <div className="p-1 bg-gray-900 rounded-md absolute top-20 mt-5 left-0 right-0 w-full">
+            <div className="p-1 bg-black rounded-md absolute top-20 mt-5 left-0 right-0 w-full">
               <div className="flex flex-col gap-2 text-white">
                 {props.links.map((link, idx) => (
                   <Link
                     href={link.to}
                     key={idx}
-                    className={`uppercase font-medium text-base text-white ${f_inter_700.className} hover:bg-red-800 p-3 rounded-sm transition-all ease-linear`}
+                    className={`uppercase font-medium text-base text-white ${f_inter_700.className} hover:bg-yellow-500 p-3 rounded-sm transition-all ease-linear`}
                   >
                     {link.name}
                   </Link>
@@ -50,7 +50,7 @@ const MobileNavbar = (props: Props) => {
                     placeholder="type here..."
                     className="w-full px-3 py-2 rounded-l-md bg-white text-blue-950 outline-none text-base font-mono"
                   />
-                  <div className="p-2 rounded-r-md bg-red-800">
+                  <div className="p-2 rounded-r-md bg-yellow-700">
                     <FaSearch className="text-white font-black text-2xl cursor-pointer" />
                   </div>
                 </div>

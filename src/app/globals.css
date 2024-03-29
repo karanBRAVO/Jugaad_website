@@ -8,7 +8,6 @@
   scroll-behavior: smooth;
   text-decoration: none;
   list-style-type: none;
-  color: blac;
 }
 
 *::-webkit-scrollbar {
@@ -35,5 +34,5 @@ body {
 
 ::selection {
   background: #000;
-  color: #000;
+  color: #fff;
 }

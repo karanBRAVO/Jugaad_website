@@ -1,7 +1,12 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { f_judson_700, f_dmsans_700, f_kaiseiOpti_700 } from "@/styles/fonts";
+import {
+  f_judson_700,
+  f_dmsans_700,
+  f_kaiseiOpti_700,
+  f_montserrat_800,
+} from "@/styles/fonts";
 
 type Props = {};
 
@@ -26,13 +31,10 @@ const Masthead = (props: Props) => {
 
   return (
     <>
-      <div className="w-full h-full flex items-center justify-center p-3">
-        <div className="w-full flex flex-col items-center justify-between p-4">
+      <div className="w-full h-full flex items-center justify-center">
+        <div className="w-full flex h-full flex-col items-center justify-center mt-6">
           <h1
-            style={{
-              WebkitTextStroke: !isDesktop ? "0.05px #000" : "3px #000",
-            }}
-            className={`capitalize text-white font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl w-full flex flex-col items-center justify-center gap-7 my-6 p-5 ${f_judson_700.className} leading-7 tracking-widest`}
+            className={`capitalize text-white font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl w-full flex flex-col items-center justify-center gap-7 my-6 p-5 ${f_montserrat_800.className} leading-7 tracking-widest`}
           >
             Jugaad
             <span
