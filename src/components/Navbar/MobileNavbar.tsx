@@ -31,7 +31,7 @@ const MobileNavbar = (props: Props) => {
               className="text-white font-black text-xl cursor-pointer hover:text-yellow-500 transition-all hover:scale-105 ease-in"
               onClick={toggleMenu}
             />
-            <div className="p-1 bg-black rounded-md absolute top-20 mt-5 left-0 right-0 w-full">
+            <div className="p-1 bg-[#00000099] rounded-md absolute top-20 mt-5 left-0 right-0 w-full">
               <div className="flex flex-col gap-2 text-white">
                 {props.links.map((link, idx) => (
                   <Link

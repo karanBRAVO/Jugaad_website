@@ -38,7 +38,7 @@ const Footer = (props: Props) => {
             <Link
               href={link.to}
               key={idx}
-              className={`font-medium text-white md:m-1 p-1 text-xs md:text-base leading-6 tracking-wide uppercase ${f_inika_700.className} text-center text-nowrap`}
+              className={`font-medium text-white md:m-1 p-1 text-sm md:text-base leading-6 tracking-wide uppercase ${f_inika_700.className} text-center text-nowrap`}
             >
               {link.name}
             </Link>

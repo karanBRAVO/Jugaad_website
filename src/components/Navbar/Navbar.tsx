@@ -14,7 +14,7 @@ const Navbar = (props: Props) => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 w-full bg-black z-10">
+      <div className="fixed top-0 left-0 right-0 w-full bg-[#00000099] z-10 sm:px-5">
         <MobileNavbar links={links} />
         <DesktopNavbar links={links} />
       </div>

@@ -7,9 +7,14 @@ type Props = {};
 const Info = (props: Props) => {
   return (
     <>
-      <div className="w-full p-3">
-        <BidirectionalLine />
-
+      <BidirectionalLine />
+      <div
+        className="w-full py-4 px-1 lg:px-24"
+        style={{
+          background: "rgba(0, 0, 0, 0.60)",
+          backdropFilter: "blur(8.649999618530273px)",
+        }}
+      >
         <p
           className={`text-white font-normal text-center text-sm md:text-xl leading-8 tracking-wider md:px-10 md:mx-9 my-5 ${f_alata_400.className}`}
         >
@@ -22,9 +27,8 @@ const Info = (props: Props) => {
           learning, where students come together to explore, create, and push
           the boundaries of what is possible in the world of technology.
         </p>
-
-        <BidirectionalLine />
       </div>
+      <BidirectionalLine />
     </>
   );
 };

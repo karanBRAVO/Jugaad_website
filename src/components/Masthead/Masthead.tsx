@@ -31,10 +31,13 @@ const Masthead = (props: Props) => {
 
   return (
     <>
-      <div className="w-full h-full flex items-center justify-center">
-        <div className="w-full flex h-full flex-col items-center justify-center mt-6">
+      <div className="w-full min-h-screen flex items-center justify-center">
+        <div className="w-full flex h-full flex-col items-center justify-center md:bg-[#00000082]">
           <h1
-            className={`capitalize text-white font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl w-full flex flex-col items-center justify-center gap-7 my-6 p-5 ${f_montserrat_800.className} leading-7 tracking-widest`}
+            className={`capitalize text-white font-black text-7xl sm:text-8xl md:text-9xl w-full flex flex-col items-center justify-center gap-7 ${f_judson_700.className} leading-7 tracking-widest`}
+            style={{
+              WebkitTextStroke: "1.15px black",
+            }}
           >
             Jugaad
             <span

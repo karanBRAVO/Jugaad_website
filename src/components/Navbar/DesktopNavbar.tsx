@@ -12,21 +12,21 @@ type Props = {
 const DesktopNavbar = (props: Props) => {
   return (
     <>
-      <div className="w-full p-5 md:flex items-center justify-around hidden">
+      <div className="w-full p-3 md:flex items-center justify-around hidden">
         <Logo />
         <div className="flex flex-row items-center justify-between">
           {props.links.map((link, idx) => (
             <Link
               href={link.to}
               key={idx}
-              className={`uppercase font-semibold text-white mx-5 text-xl hover:text-yellow-500 transition-all ease-in-out tracking-normal leading-tight ${f_inter_700.className}`}
+              className={`uppercase font-semibold text-white mx-5 text-base hover:text-yellow-500 transition-all ease-in-out tracking-normal leading-tight ${f_inter_700.className}`}
             >
               {link.name}
             </Link>
           ))}
         </div>
         <FaSearch
-          className="text-white font-black text-3xl cursor-pointer mx-2 hover:text-yellow-500 hover:scale-110 transition-all ease-in"
+          className="text-white font-black text-2xl cursor-pointer mx-2 hover:text-yellow-500 hover:scale-110 transition-all ease-in"
           title="Search Jugaad"
         />
       </div>
