@@ -31,8 +31,8 @@ const Masthead = (props: Props) => {
 
   return (
     <>
-      <div className="w-full min-h-screen flex items-center justify-center">
-        <div className="w-full flex h-full flex-col items-center justify-center md:bg-[#00000082]">
+      <div className="w-full min-h-screen h-full flex items-center justify-center lg:bg-[#00000082]">
+        <div className="w-full flex h-full flex-col items-center justify-center">
           <h1
             className={`capitalize text-white font-black text-7xl sm:text-8xl md:text-9xl w-full flex flex-col items-center justify-center gap-7 ${f_judson_700.className} leading-7 tracking-widest`}
             style={{
