@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { f_amaranth_400, f_alata_400 } from "@/styles/fonts";
 import { ImageType } from "@/types/Image";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
@@ -58,7 +58,7 @@ const CustomSlider = (props: Props) => {
               prevEl: ".prev",
               nextEl: ".next",
             }}
-            modules={[Pagination, Navigation]}
+            modules={[Navigation]}
             className="w-full h-full my-5"
           >
             {props.images.map((image, i) => (
@@ -91,19 +91,16 @@ const CustomSlider = (props: Props) => {
 const SlideNavigationButtons = () => {
   const swiper = useSwiper();
 
+  const btnStyles = `p-1 sm:p-2 md:p-3 rounded-full bg-white w-fit cursor-pointer border-2 md:border-4 border-solid border-black`;
+  const iconStyles = `font-black text-black text-sm sm:text-base md:text-xl`;
+
   return (
-    <div className="flex w-full items-center justify-between my-10 absolute top-0 px-1 z-10">
-      <div
-        className="prev p-3 rounded-full bg-white w-fit cursor-pointer border-2 md:border-4 border-solid border-black"
-        onClick={() => swiper.slidePrev(1)}
-      >
-        <FaArrowLeftLong className="font-black text-black text-base md:text-xl" />
+    <div className="flex w-full items-center justify-between my-10 absolute top-1/2 z-10">
+      <div className={`prev ${btnStyles}`} onClick={() => swiper.slidePrev(1)}>
+        <FaArrowLeftLong className={`${iconStyles}`} />
       </div>
-      <div
-        className="next p-3 rounded-full bg-white w-fit cursor-pointer border-2 md:border-4 border-solid border-black"
-        onClick={() => swiper.slideNext()}
-      >
-        <FaArrowRightLong className="font-black text-black text-base md:text-xl" />
+      <div className={`next ${btnStyles}`} onClick={() => swiper.slideNext()}>
+        <FaArrowRightLong className={`${iconStyles}`} />
       </div>
     </div>
   );
