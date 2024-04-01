@@ -38,7 +38,7 @@ const Masthead = (props: Props) => {
           >
             Jugaad
             <span
-              className={`font-black leading-none tracking-widest text-white text-xs sm:text-base md:text-2xl lg:text-3xl my-5 sm:p-5 ${f_dmsans_700.className} w-full text-center text-nowrap`}
+              className={`font-black leading-none tracking-widest text-white text-base sm:text-xl md:text-2xl lg:text-3xl my-5 sm:p-5 ${f_dmsans_700.className} w-full text-center text-nowrap`}
               style={{
                 WebkitTextStroke: "0.05px black",
               }}
@@ -47,7 +47,7 @@ const Masthead = (props: Props) => {
             </span>
           </h1>
           <h2
-            className={`text-white font-black text-base sm:text-2xl md:text-3xl lg:text-6xl flex flex-row items-center justify-center w-full gap-2 sm:gap-3 md:gap-4 capitalize my-5 md:mb-24 p-2 self-end ${f_kaiseiOpti_700.className} leading-6 tracking-wide`}
+            className={`text-white font-black text-xl sm:text-2xl md:text-3xl lg:text-6xl flex flex-row items-center justify-center w-full gap-2 sm:gap-3 md:gap-4 capitalize my-5 md:mb-24 p-2 self-end ${f_kaiseiOpti_700.className} leading-6 tracking-wide`}
           >
             <span
               style={{
