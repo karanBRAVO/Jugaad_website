@@ -47,14 +47,14 @@ const CustomSlider = (props: Props) => {
           {props.title}
         </h1>
 
-        <div className="py-1 px-2 md:px-14 my-5 w-full h-full">
+        <div className="py-1 px-2 md:px-14 my-5 w-full h-full relative">
           <Swiper
             effect={"fade"}
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={isDesktop ? 3 : 1}
             spaceBetween={30}
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 2500 }}
             loop={true}
             zoom={true}
             pagination={{
@@ -104,7 +104,7 @@ const SlideNavigationButtons = () => {
   const iconStyles = `font-black text-black text-sm sm:text-base md:text-xl`;
 
   return (
-    <div className="flex w-full items-center justify-between absolute my-10 bottom-0 z-10">
+    <div className="flex w-full items-center justify-between absolute my-10 left-0 bottom-1/2 translate-y-1/2 z-10">
       <div className={`prev ${btnStyles}`} onClick={() => swiper.slidePrev(1)}>
         <FaArrowLeftLong className={`${iconStyles}`} />
       </div>

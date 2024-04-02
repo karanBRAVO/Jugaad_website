@@ -59,7 +59,7 @@ const Slider = (props: Props) => {
 
   return (
     <>
-      <div className="w-full flex flex-col gap-3">
+      <div className="w-full flex flex-col gap-3 md:pr-8">
         <CustomSlider title="Session / Workshops" images={images1} />
         <CustomSlider title="Projects" images={images2} />
       </div>
