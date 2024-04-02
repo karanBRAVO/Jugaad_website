@@ -33,12 +33,12 @@ const Footer = (props: Props) => {
             </h1>
           </Link>
         </div>
-        <div className="flex flex-row md:flex-col items-start justify-start my-7 md:my-0">
+        <div className="flex flex-row md:flex-col items-start justify-start my-7 md:my-0 gap-1">
           {links.map((link, idx) => (
             <Link
               href={link.to}
               key={idx}
-              className={`font-medium text-white md:m-1 p-1 text-sm md:text-base leading-6 tracking-wide uppercase ${f_inika_700.className} text-center text-nowrap`}
+              className={`font-medium text-white md:m-1 py-1 px-1 md:px-3 text-sm md:text-base leading-6 tracking-wide uppercase ${f_inika_700.className} text-center text-nowrap`}
             >
               {link.name}
             </Link>
@@ -47,24 +47,24 @@ const Footer = (props: Props) => {
         <div className="flex flex-col items-start justify-between w-full sm:w-fit">
           <div className="my-2 md:my-0 w-full">
             <h3
-              className={`underline sm:-rotate-0 origin-left text-white font-medium text-base md:text-xl tracking-wide leading-7 capitalize ${f_inter_800.className}`}
+              className={`underline text-white font-medium text-base md:text-xl tracking-wide leading-7 capitalize ${f_inter_800.className}`}
             >
               Email Address
             </h3>
             <p
-              className={`${f_inter_400.className} sm:-rotate-0 origin-left flex flex-col items-end sm:items-start justify-start leading-6 text-base font-light text-white p-1`}
+              className={`${f_inter_400.className} flex flex-col items-start justify-start leading-6 text-base font-light text-white p-1`}
             >
               <span>jugaadclubuiet@gmail.com</span>
             </p>
           </div>
           <div className="my-2 md:my-0 w-full">
             <h3
-              className={`underline sm:-rotate-0 origin-left text-white font-medium text-base md:text-xl tracking-wide leading-7 capitalize ${f_inter_800.className}`}
+              className={`underline text-white font-medium text-base md:text-xl tracking-wide leading-7 capitalize ${f_inter_800.className}`}
             >
               Phone Number
             </h3>
             <p
-              className={`${f_inter_400.className} sm:-rotate-0 origin-left flex flex-col items-end sm:items-start justify-start w-full leading-6 text-base font-light text-white p-1`}
+              className={`${f_inter_400.className} flex flex-col items-start justify-start w-full leading-6 text-base font-light text-white p-1`}
             >
               <span>Pranav - 8427311044 </span>
               <span>Kunal - 8604329827</span>
