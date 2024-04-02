@@ -31,10 +31,10 @@ const Masthead = (props: Props) => {
 
   return (
     <>
-      <div className="w-full min-h-screen h-full flex items-center justify-center lg:bg-[#00000082]">
-        <div className="w-full flex h-full flex-col items-center justify-center">
+      <div className="w-full min-h-screen h-full flex items-center justify-center">
+        <div className="w-full flex flex-col items-center justify-center bg-[#00000099] px-1 py-6 mt-10">
           <h1
-            className={`capitalize text-white font-black text-7xl sm:text-8xl md:text-9xl w-full flex flex-col items-center justify-center gap-7 ${f_judson_700.className} leading-7 tracking-widest`}
+            className={`capitalize text-white font-black text-7xl md:text-8xl w-full flex flex-col items-center justify-center gap-7 ${f_judson_700.className} leading-7 tracking-widest`}
             style={{
               WebkitTextStroke: "1.15px black",
             }}
@@ -50,7 +50,7 @@ const Masthead = (props: Props) => {
             </span>
           </h1>
           <h2
-            className={`text-white font-black text-xl sm:text-2xl md:text-3xl lg:text-6xl flex flex-row items-center justify-center w-full gap-2 sm:gap-3 md:gap-4 capitalize my-5 md:mb-24 p-2 self-end ${f_kaiseiOpti_700.className} leading-6 tracking-wide`}
+            className={`text-white font-black text-xl sm:text-2xl md:text-3xl lg:text-6xl flex flex-row items-center justify-center w-full gap-2 sm:gap-3 md:gap-4 capitalize my-5 p-2 self-end ${f_kaiseiOpti_700.className} leading-6 tracking-wide`}
           >
             <span
               style={{

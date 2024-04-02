@@ -6,12 +6,11 @@ type Props = {};
 
 const Info = (props: Props) => {
   return (
-    <>
+    <div className="py-14 px-[.5px]">
       <BidirectionalLine />
       <div
         className="w-full py-4 px-1 lg:px-24"
         style={{
-          background: "rgba(0, 0, 0, 0.60)",
           backdropFilter: "blur(8.649999618530273px)",
         }}
       >
@@ -29,7 +28,7 @@ const Info = (props: Props) => {
         </p>
       </div>
       <BidirectionalLine />
-    </>
+    </div>
   );
 };
 

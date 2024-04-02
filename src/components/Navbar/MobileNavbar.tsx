@@ -18,7 +18,7 @@ const MobileNavbar = (props: Props) => {
 
   return (
     <>
-      <div className="w-full p-5 flex items-center justify-between md:hidden relative">
+      <div className="w-full px-5 py-3 flex items-center justify-between md:hidden relative">
         <Logo />
         {menuStatus ? (
           <FaBars
@@ -33,15 +33,6 @@ const MobileNavbar = (props: Props) => {
             />
             <div className="p-1 bg-[#00000099] rounded-md absolute top-20 mt-5 left-0 right-0 w-full">
               <div className="flex flex-col gap-2 text-white">
-                {props.links.map((link, idx) => (
-                  <Link
-                    href={link.to}
-                    key={idx}
-                    className={`uppercase font-medium text-base text-white ${f_inter_700.className} hover:bg-yellow-500 p-3 rounded-sm transition-all ease-linear`}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
                 <div className="w-full flex flex-row gap-0 items-center justify-center">
                   <input
                     type="search"
@@ -54,6 +45,15 @@ const MobileNavbar = (props: Props) => {
                     <FaSearch className="text-white font-black text-2xl cursor-pointer" />
                   </div>
                 </div>
+                {props.links.map((link, idx) => (
+                  <Link
+                    href={link.to}
+                    key={idx}
+                    className={`uppercase font-medium text-base text-white ${f_inter_700.className} hover:bg-yellow-500 p-3 rounded-sm transition-all ease-linear`}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
               </div>
             </div>
           </>

@@ -24,7 +24,10 @@ const Home = (props: Props) => {
         <div className="h-screen flex items-center justify-center bg-white shadow-md">
           <Sidebar />
         </div>
-        <div className="w-full h-screen overflow-y-auto bg-transparent text-white">
+        <div
+          className="w-full h-screen overflow-y-auto bg-transparent text-white"
+          id="scrollable-container-parallax"
+        >
           {/* Header */}
           <div className="w-full bg-transparent h-screen">
             <Navbar />
@@ -36,7 +39,7 @@ const Home = (props: Props) => {
             {/* Info's */}
             <Info />
             {/* Carousels */}
-            <div className="w-full">
+            <div className="w-full py-3 md:py-8 md:mt-16 px-[.5px]">
               <Slider />
             </div>
           </div>

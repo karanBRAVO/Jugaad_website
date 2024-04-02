@@ -4,7 +4,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: white black;
+  scrollbar-color: rgba(217, 217, 217, 0) black;
   scroll-behavior: smooth;
   text-decoration: none;
   list-style-type: none;
@@ -20,9 +20,9 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: rgba(217, 217, 217, 0.4);
   border-radius: 20px;
-  border: 3px solid white;
+  border: 3px solid rgba(217, 217, 217, 0.4);
 }
 
 html,

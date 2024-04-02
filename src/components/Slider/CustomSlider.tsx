@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { f_amaranth_400, f_alata_400 } from "@/styles/fonts";
 import { ImageType } from "@/types/Image";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
@@ -36,7 +36,7 @@ const CustomSlider = (props: Props) => {
 
   return (
     <>
-      <div className="w-full p-1 md:p-3 flex flex-col items-center my-4 md:my-8">
+      <div className="w-full p-1 md:p-5 flex flex-col items-center my-10 md:my-12">
         <h1
           className={`text-5xl md:text-7xl font-extrabold text-white my-1 md:leading-3 tracking-tight ${f_alata_400.className} p-1 my-2 md:p-5 md:my-5 text-wrap`}
           style={{
@@ -48,9 +48,14 @@ const CustomSlider = (props: Props) => {
 
         <div className="py-1 px-2 md:px-14 my-5 w-full h-full">
           <Swiper
+            effect={"fade"}
+            grabCursor={true}
+            centeredSlides={true}
             slidesPerView={isDesktop ? 3 : 1}
             spaceBetween={30}
+            autoplay={{ delay: 3000 }}
             loop={true}
+            zoom={true}
             pagination={{
               clickable: true,
             }}
@@ -58,7 +63,7 @@ const CustomSlider = (props: Props) => {
               prevEl: ".prev",
               nextEl: ".next",
             }}
-            modules={[Navigation]}
+            modules={[Navigation, Pagination, Autoplay]}
             className="w-full h-full my-5"
           >
             {props.images.map((image, i) => (

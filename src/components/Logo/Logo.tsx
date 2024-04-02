@@ -15,7 +15,7 @@ const Logo = (props: Props) => {
             alt="Logo"
             width={100}
             height={100}
-            className="m-1 w-20 md:w-36"
+            className="m-1 w-20 md:w-32"
           />
           <h1
             className={`text-white text-sm md:text-base tracking-wider font-bold uppercase text-center ${f_inter_700.className}`}
