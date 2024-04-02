@@ -9,6 +9,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { f_amaranth_400, f_alata_400 } from "@/styles/fonts";
 import { ImageType } from "@/types/Image";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
+import "@/styles/custom_slider.css";
 
 type Props = {
   title: string;
@@ -36,7 +37,7 @@ const CustomSlider = (props: Props) => {
 
   return (
     <>
-      <div className="w-full p-1 md:p-5 flex flex-col items-center my-10 md:my-12">
+      <div className="w-full p-1 md:p-5 flex flex-col items-center my-10 md:my-12 relative">
         <h1
           className={`text-5xl md:text-7xl font-extrabold text-white my-1 md:leading-3 tracking-tight ${f_alata_400.className} p-1 my-2 md:p-5 md:my-5 text-wrap`}
           style={{
@@ -58,6 +59,9 @@ const CustomSlider = (props: Props) => {
             zoom={true}
             pagination={{
               clickable: true,
+              renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + "</span>";
+              },
             }}
             navigation={{
               prevEl: ".prev",
@@ -100,7 +104,7 @@ const SlideNavigationButtons = () => {
   const iconStyles = `font-black text-black text-sm sm:text-base md:text-xl`;
 
   return (
-    <div className="flex w-full items-center justify-between my-10 absolute top-1/2 z-10">
+    <div className="flex w-full items-center justify-between absolute my-10 bottom-0 z-10">
       <div className={`prev ${btnStyles}`} onClick={() => swiper.slidePrev(1)}>
         <FaArrowLeftLong className={`${iconStyles}`} />
       </div>
