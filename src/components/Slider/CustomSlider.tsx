@@ -69,6 +69,7 @@ const CustomSlider = (props: Props) => {
             }}
             modules={[Navigation, Pagination, Autoplay]}
             className="w-full h-full my-5"
+            simulateTouch={true}
           >
             {props.images.map((image, i) => (
               <SwiperSlide
