@@ -16,7 +16,7 @@ const Footer = (props: Props) => {
 
   return (
     <>
-      <div className="w-full flex flex-col sm:flex-row items-center sm:items-start justify-around px-4 sm:px-12 py-6">
+      <div className="w-full flex flex-col sm:flex-row items-center sm:items-start justify-evenly px-4 sm:px-12 py-6">
         <div className="flex flex-col items-center justify-center gap-1">
           <Link href={"/"}>
             <Image

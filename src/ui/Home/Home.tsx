@@ -45,9 +45,9 @@ const Home = (props: Props) => {
           </div>
 
           {/* Footer */}
-          <div className="w-full p-1 bg-black border-2 border-solid border-black">
+          <footer className="w-full p-1 bg-black border-2 border-solid border-black">
             <Footer />
-          </div>
+          </footer>
         </div>
       </section>
     </>
