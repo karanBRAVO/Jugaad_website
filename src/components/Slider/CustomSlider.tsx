@@ -18,21 +18,34 @@ type Props = {
 
 const CustomSlider = (props: Props) => {
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
     const checkIsDesktop = () => {
       setIsDesktop(window.matchMedia("(min-width: 960px)").matches);
     };
-
-    checkIsDesktop();
-
-    const mediaQuery = window.matchMedia("(min-width: 960px)");
-    const handleResize = () => {
-      setIsDesktop(mediaQuery.matches);
+    const checkIsTablet = () => {
+      setIsTablet(window.matchMedia("(min-width: 700px)").matches);
     };
 
-    mediaQuery.addEventListener("change", handleResize);
-    return () => mediaQuery.removeEventListener("change", handleResize);
+    checkIsDesktop();
+    checkIsTablet();
+
+    const mediaQuery_desktop = window.matchMedia("(min-width: 960px)");
+    const mediaQuery_tablet = window.matchMedia("(min-width: 700px)");
+    const handleResize_desktop = () => {
+      setIsDesktop(mediaQuery_desktop.matches);
+    };
+    const handleResize_tablet = () => {
+      setIsTablet(mediaQuery_tablet.matches);
+    };
+
+    mediaQuery_desktop.addEventListener("change", handleResize_desktop);
+    mediaQuery_tablet.addEventListener("change", handleResize_tablet);
+    return () => {
+      mediaQuery_desktop.removeEventListener("change", handleResize_desktop);
+      mediaQuery_tablet.removeEventListener("change", handleResize_tablet);
+    };
   }, []);
 
   return (
@@ -47,12 +60,12 @@ const CustomSlider = (props: Props) => {
           {props.title}
         </h1>
 
-        <div className="py-1 px-2 md:px-14 my-5 w-full h-full relative">
+        <div className="py-1 px-5 md:px-14 my-5 w-full h-full relative">
           <Swiper
             effect={"fade"}
             grabCursor={true}
             centeredSlides={true}
-            slidesPerView={isDesktop ? 3 : 1}
+            slidesPerView={isDesktop ? 3 : isTablet ? 2 : 1}
             spaceBetween={30}
             autoplay={{ delay: 2500 }}
             loop={true}
@@ -105,7 +118,7 @@ const SlideNavigationButtons = () => {
   const iconStyles = `font-black text-black text-sm sm:text-base md:text-xl`;
 
   return (
-    <div className="flex w-full items-center justify-between absolute my-10 left-0 bottom-1/2 translate-y-1/2 z-10">
+    <div className="hidden md:flex w-full items-center justify-between absolute my-10 left-0 bottom-1/2 translate-y-1/2 z-10">
       <div className={`prev ${btnStyles}`} onClick={() => swiper.slidePrev(1)}>
         <FaArrowLeftLong className={`${iconStyles}`} />
       </div>
