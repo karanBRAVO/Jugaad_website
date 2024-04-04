@@ -15,7 +15,7 @@ const Info = (props: Props) => {
         }}
       >
         <p
-          className={`text-white font-normal text-center text-sm md:text-xl leading-8 tracking-wider md:px-10 md:mx-9 my-5 ${f_alata_400.className}`}
+          className={`text-white font-normal text-center text-sm md:text-xl leading-8 tracking-wider md:px-10 md:mx-9 my-5 px-[15px] ${f_alata_400.className}`}
         >
           At Jugaad, we believe in the limitless possibilities that emerge when
           creativity meets technology. As the premier robotic club of UIET
