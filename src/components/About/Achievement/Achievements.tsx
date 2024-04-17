@@ -9,7 +9,7 @@ const Achievements = () => {
     <>
       <div className="w-full flex flex-col items-center py-5 px-4">
         <h1
-          className={`capitalize text-white my-4 mx-1 py-2 text-6xl leading-none tracking-normal ${f_alata_400.className}`}
+          className={`capitalize text-white my-4 mx-1 py-2 px-1 text-5xl md:text-6xl leading-none tracking-normal ${f_alata_400.className}`}
           style={{
             WebkitTextStrokeWidth: 3,
             WebkitTextStrokeColor: "#000",
@@ -17,16 +17,16 @@ const Achievements = () => {
         >
           Achievements
         </h1>
-        <div className="flex flex-row items-start justify-evenly w-full my-2">
+        <div className="flex flex-row items-center flex-wrap justify-evenly w-full my-2 gap-8">
           {AchievementsImages.map((image, index) => (
-            <div className="flip-card" key={index}>
+            <div className="flip-card w-[320px] h-[400px]" key={index}>
               <div className="flip-card-inner w-full h-full">
                 <div className="flip-card-front w-full h-full">
                   <Image
                     src={image.front.src}
                     alt={image.front.alt}
-                    width={300}
-                    height={300}
+                    width={200}
+                    height={200}
                     draggable={false}
                     className={`w-full h-full border-4 rounded-lg border-solid border-white`}
                   />
