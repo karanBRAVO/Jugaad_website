@@ -1,9 +1,9 @@
 import React from "react";
 
-const Activities = () =>{
+const Team = () =>{
     return(
         <>
         </>
     )
 }
-export default Activities;
+export default Team;

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Commons from "./Commons";
 
 export const metadata: Metadata = {
   title: "Jugaad",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-parallax bg-no-repeat bg-cover">
+        <Commons children={children} />
+      </body>
     </html>
   );
 }
