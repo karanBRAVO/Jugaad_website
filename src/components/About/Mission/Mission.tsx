@@ -5,7 +5,7 @@ import { f_alata_400 } from "@/styles/fonts";
 const Mission = () => {
   return (
     <>
-      <div className="w-full py-16 px-10 flex flex-row justify-center">
+      <div className="min-h-screen w-full py-16 px-10 flex flex-row justify-center">
         <div className="flex flex-col items-center justify-center p-1 w-1/2">
           <Image
             src={"/team/mission.png"}

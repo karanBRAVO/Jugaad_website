@@ -31,17 +31,17 @@ const Achievements = () => {
                     className={`w-full h-full border-4 rounded-lg border-solid border-white`}
                   />
                 </div>
-                <div className="flip-card-back w-full h-full flex flex-col items-center justify-between bg-black">
+                <div className="flip-card-back w-full h-full flex flex-col items-center justify-center bg-black">
                   <Image
                     src={image.back.src}
                     alt={image.back.alt}
                     width={300}
                     height={300}
                     draggable={false}
-                    className={`w-full h-full px-5 py-4`}
+                    className={`w-full h-[80%] px-5 py-4`}
                   />
                   <p
-                    className={`text-white text-sm p-2 ${f_alata_400} text-center w-full rounded-md`}
+                    className={`text-white text-sm ${f_alata_400} text-center w-full rounded-md`}
                   >
                     {image.back.title}
                   </p>
