@@ -1,10 +1,10 @@
+import { SidebarLinks } from "@/types/LinkTypes";
 import {
   FaDiscord,
   FaSquareInstagram,
   FaYoutube,
   FaLinkedin,
 } from "react-icons/fa6";
-import { SidebarLinks } from "@/types/links";
 
 const links: SidebarLinks[] = [
   {
