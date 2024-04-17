@@ -26,14 +26,14 @@ const Masthead = () => {
           <p className="flex flex-col items-start justify-start gap-10 text-white text-base py-8 px-[87px]">
             <span>
               Jugaad at UIET, Panjab University, Chandigarh, transcends being
-              just a robotics club; it's a vibrant community driven by the
+              just a robotics club; it{`'`}s a vibrant community driven by the
               fusion of creativity and technology. As the foremost robotic club
-              in UIET College, we're dedicated to nurturing students passionate
+              in UIET College, we{`'`}re dedicated to nurturing students passionate
               about robotics, embedded systems, programming, 3D designing, 3D
               printing, and cutting-edge technologies.
             </span>
             <span>
-              Jugaad Robotics Club is not just a club; it's a community of
+              Jugaad Robotics Club is not just a club; it{`'`}s a community of
               passionate individuals driven by innovation, creativity, and a
               shared love for robotics. Founded with the aim of fostering a
               culture of technological exploration and hands-on learning, Jugaad

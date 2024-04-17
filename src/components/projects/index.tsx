@@ -11,6 +11,7 @@ import { f_amaranth_400, f_alata_400 } from "@/styles/fonts";
 import { ImageType } from "@/types/Image";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 import { Images_Projects } from "./projects_data";
+import Image from "next/image";
 
 const projects = () => {
   return (
@@ -107,7 +108,7 @@ const CustomSlider = (props: Props) => {
                 >
                   {image.title}
                 </h5>
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
                   width={150}
