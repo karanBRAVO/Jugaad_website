@@ -9,14 +9,14 @@ type Props = {};
 const footer = (props: Props) => {
   return (
     <>
-      <footer className="w-full p-1 bg-black border-2 border-solid border-black">
+      <footer className="w-full pt-1 static bg-black mt-10">
         <div className="w-full flex flex-col sm:flex-row items-center sm:items-start justify-evenly px-4 sm:px-12 py-6">
           <div className="flex flex-col items-center justify-center gap-1">
             <Link href={"/"}>
               <Image
                 src={"/Logo.png"}
                 alt="Logo"
-                width={100}
+                width={500}
                 height={100}
                 className="m-1 w-36 sm:w-52"
               />
@@ -27,7 +27,7 @@ const footer = (props: Props) => {
               </h1>
             </Link>
           </div>
-          <div className="flex flex-col items-center sm:justify-between sm:gap-1 sm:px-2">
+          <div className="flex flex-col items-center justify-center sm:gap-1 sm:px-2">
             <div className="flex flex-row items-start justify-start my-7 w-full sm:my-0 gap-1">
               {FooterLinks.map((link, idx) => (
                 <Link
@@ -39,7 +39,7 @@ const footer = (props: Props) => {
                 </Link>
               ))}
             </div>
-            <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between w-full px-2 sm:pt-3 sm:mt-2">
+            <div className="flex flex-col  items-center sm:items-start justify-between w-full px-2 sm:pt-3 sm:mt-2">
               <div className="w-full h-full px-2 flex flex-col items-center gap-2 py-1">
                 <h3
                   className={`underline text-white font-medium text-base sm:text-xl tracking-wide leading-none capitalize ${f_inter_800.className} p-3`}

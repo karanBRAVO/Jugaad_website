@@ -19,7 +19,7 @@ const Sidebar = (props: Props) => {
               className="px-1 md:px-3 py-2 sm:py-7"
             >
               <link.iconName
-                className="text-black text-xl md:text-2xl font-black hover:text-[yellow] transition-all ease-linear"
+                className="text-black text-xl md:text-2xl font-black hover:text-[#531c1c] transition-all ease-linear"
                 title={link.name}
               />
             </Link>

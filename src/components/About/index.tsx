@@ -4,7 +4,9 @@ import {
   AboutMission,
   AboutWhatWeDo,
   AboutAchievements,
+  Projects,
 } from "../ComponentExporter";
+
 
 const About = () => {
   return (
@@ -13,6 +15,7 @@ const About = () => {
       <AboutMission />
       <AboutWhatWeDo />
       <AboutAchievements />
+      <Projects/>
     </>
   );
 };

@@ -1,19 +1,15 @@
 import React from "react";
-import {
-  Info,
-  MastHead,
-  Worshops,
-  Projects,
-} from "@/components/ComponentExporter";
+import HeroParallaxPage from "../masthead";
+import Typecontent from "../info";
+
+
 
 const Home = () => {
   return (
-    <>
-      <MastHead />
-      <Info />
-      <Worshops />
-      <Projects />
-    </>
+    <div className=" ">
+      <HeroParallaxPage/>
+      <Typecontent/>
+    </div>
   );
 };
 

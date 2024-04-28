@@ -1,108 +1,72 @@
 import React from "react";
-import Image from "next/image";
-import { f_alata_400 } from "@/styles/fonts";
-import { LeftBg, RightBg } from "./bg";
+import Infobox from "../info";
 
 const Masthead = () => {
   return (
-    <>
+    <div >
       {/* Mobile View */}
-      <div className="min-h-screen flex xl:hidden items-center justify-center flex-col py-10 relative">
-        {/* <div className="absolute top-0 left-0 w-[60%]">
-          <LeftBg />
-        </div>
-        <div className="absolute top-0 right-0 w-[40%]">
-          <RightBg />
-        </div> */}
+      <div className="min-h-screen flex xl:hidden items-center justify-center flex-col relative pt-16">
         <h1
-          className={`relative uppercase text-white text-5xl ${f_alata_400.className} leading-none tracking-wide w-full text-center py-1 mt-20`}
-          style={{
-            WebkitTextStrokeWidth: 3,
-            WebkitTextStrokeColor: "#000",
-          }}
-        >
-          What is Jugaad
-        </h1>
-        <Image
-          src={"/team/team.jpg"}
-          alt="Jugaad Team"
-          width={250}
-          height={200}
-          draggable={false}
-          className="relative w-full max-w-md h-[250px] border-4 border-solid border-black rounded-[50px] my-5"
-        />
-        <p className="relative flex flex-col items-start justify-start gap-10 text-white text-base py-8 px-2 sm:px-20 w-full text-center my-5 bg-[#000000ba]">
-          <span>
-            Jugaad at UIET, Panjab University, Chandigarh, transcends being just
-            a robotics club; it{`'`}s a vibrant community driven by the fusion
-            of creativity and technology. As the foremost robotic club in UIET
-            College, we{`'`}re dedicated to nurturing students passionate about
-            robotics, embedded systems, programming, 3D designing, 3D printing,
-            and cutting-edge technologies.
-          </span>
-          <span>
-            Jugaad Robotics Club is not just a club; it{`'`}s a community of
-            passionate individuals driven by innovation, creativity, and a
-            shared love for robotics. Founded with the aim of fostering a
-            culture of technological exploration and hands-on learning, Jugaad
-            Robotics Club has become a hub for aspiring engineers and
-            enthusiasts alike.
-          </span>
-        </p>
+            className={`uppercase text-white sm:text-6xl text-5xl leading-none tracking-wide mt-8`}
+            style={{
+              WebkitTextStrokeWidth: 1,
+              WebkitTextFillColor:'white',
+              WebkitTextStrokeColor: "#000",
+              textShadow: "0 1px 0 #ccc, \
+              0 2px 0 #c9c9c9, \
+              0 3px 0 #bbb, \
+              0 4px 0 #b9b9b9, \
+              0 5px 0 #aaa, \
+              0 6px 1px rgba(0,0,0,.1), \
+              0 1px 3px rgba(0,0,0,.3), \
+              0 3px 5px rgba(0,0,0,.2), \
+              0 5px 10px rgba(0,0,0,.25), \
+              0 10px 10px rgba(0,0,0,.2), \
+              0 20px 20px rgba(0,0,0,.15), \
+              0 30px 20px rgba(0,0,0,.1)" 
+            }}
+          >
+            Jugaad
+          </h1>
+        <div className="px-1 ">
+          <Infobox/>
+        </div>
+        
       </div>
 
       {/* Desktop View */}
-      <div className="w-full min-h-screen hidden xl:flex flex-row items-center justify-center pt-16 relative">
-        <div className="absolute top-[0] left-0 w-[68%]">
-          <LeftBg />
-        </div>
-        <div className="absolute top-[0] right-8 w-[32%]">
-          <RightBg />
-        </div>
-        <div className="relative flex items-center flex-col justify-center px-4 py-5 w-1/2">
-          <h1
-            className={`uppercase text-white text-6xl ${f_alata_400.className} leading-none tracking-wide`}
-            style={{
-              WebkitTextStrokeWidth: 3,
-              WebkitTextStrokeColor: "#000",
-            }}
-          >
+      <div className="w-full min-h-screen hidden xl:flex flex-col items-center justify-center pt-16 relative">
+        <div className="relative flex items-center flex-col justify-center px-4 py-7">
+          <div className="">
+            <h1
+              className={`uppercase w-full text-white text-6xl leading-none tracking-wide underline pt-8`}
+              style={{
+                WebkitTextStrokeWidth: 1,
+                WebkitTextFillColor:'white',
+                WebkitTextStrokeColor: "#000",
+                textShadow: "0 1px 0 #ccc, \
+                0 2px 0 #c9c9c9, \
+                0 3px 0 #bbb, \
+                0 4px 0 #b9b9b9, \
+                0 5px 0 #aaa, \
+                0 6px 1px rgba(0,0,0,.1), \
+                0 1px 3px rgba(0,0,0,.3), \
+                0 3px 5px rgba(0,0,0,.2), \
+                0 5px 10px rgba(0,0,0,.25), \
+                0 10px 10px rgba(0,0,0,.2), \
+                0 20px 20px rgba(0,0,0,.15), \
+                0 30px 20px rgba(0,0,0,.1)" 
+              }}
+            >
             What is Jugaad
-          </h1>
-          <p className="flex flex-col items-start justify-start gap-10 text-white text-base py-8 px-[87px]">
-            <span>
-              Jugaad at UIET, Panjab University, Chandigarh, transcends being
-              just a robotics club; it{`'`}s a vibrant community driven by the
-              fusion of creativity and technology. As the foremost robotic club
-              in UIET College, we{`'`}re dedicated to nurturing students
-              passionate about robotics, embedded systems, programming, 3D
-              designing, 3D printing, and cutting-edge technologies.
-            </span>
-            <span>
-              Jugaad Robotics Club is not just a club; it{`'`}s a community of
-              passionate individuals driven by innovation, creativity, and a
-              shared love for robotics. Founded with the aim of fostering a
-              culture of technological exploration and hands-on learning, Jugaad
-              Robotics Club has become a hub for aspiring engineers and
-              enthusiasts alike.
-            </span>
-          </p>
+            </h1>
+          </div>
         </div>
-        <div className="relative p-1 w-1/2 flex items-center justify-center">
-          <Image
-            src={"/team/team.jpg"}
-            alt="Jugaad Team"
-            width={250}
-            height={200}
-            draggable={false}
-            className="w-[590px] h-[300px] border-4 border-solid border-black rounded-[50px]"
-            style={{
-              boxShadow: "20px 20px 4px 0px #282829",
-            }}
-          />
+        <div className="relative flex flex-col lg:flex-row items-center justify-center">
+          <Infobox/>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,156 @@
+.cubeloader {
+  position: relative;
+  width: 250px; 
+  height: 250px; 
+  perspective: 1000px;
+  padding: 0px 20px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px; 
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  animation: rotate-cube 8s linear infinite;  
+}
+
+.side {
+  position: absolute;
+  width: 200px;
+  height: 200px; 
+  border:solid 2px black;
+  box-shadow: inset 2px 2px 10px #040404;
+  background: linear-gradient(
+    to top,
+    hsl(330,3.13%,25.1%) 0%,
+    hsl(177.27,21.271%,32.06%) 5.5%,
+    hsl(176.67,34.1%,36.88%) 12.1%,
+    hsl(176.61,42.28%,40.7%) 19.6%,
+    hsl(176.63,48.32%,43.88%) 27.9%,
+    hsl(176.66,53.07%,46.58%) 36.6%,
+    hsl(176.7,56.94%,48.91%) 45.6%,
+    hsl(176.74,62.39%,50.91%) 54.6%,
+    hsl(176.77,69.86%,52.62%) 63.4%,
+    hsl(176.8,76.78%,54.08%) 71.4%,
+    hsl(176.83,83.02%,55.29%) 79.4%,
+    hsl(176.85,88.44%,56.28%) 86.2%,
+    hsl(176.86,92.9%,57.04%) 91.9%,
+    hsl(176.88,96.24%,57.59%) 96.3%,
+    hsl(176.88,98.34%,57.93%) 99%,
+    hsl(176.89,99.07%,58.04%) 100%
+    );
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .side:nth-child(1) { transform: rotateX(90deg) translateZ(100px); }
+  .side:nth-child(2) { transform: rotateX(-90deg) translateZ(100px); } 
+  .side:nth-child(3) { transform: rotateY(90deg) translateZ(100px); }
+  .side:nth-child(4) { transform: rotateY(-90deg) translateZ(100px); }
+  .side:nth-child(5) { transform: rotateY(180deg) translateZ(100px); }
+  .side:nth-child(6) { transform: rotateY(0deg) translateZ(100px); } 
+
+@media (min-width: 768px){
+  .cubeloader {
+    position: relative;
+    width: 250px; 
+    height: 250px; 
+    perspective: 1000px;
+   
+  }
+
+  .cube {
+    width: 200px;
+    height: 200px; 
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: rotate-cube 12s linear infinite;
+    
+  }
+  .side {
+    position: absolute;
+    width: 250px;
+    height: 250px; 
+    border:solid 2px black;
+    box-shadow: inset 2px 2px 10px #040404;
+    background: linear-gradient(
+      to top,
+      hsl(330,3.13%,25.1%) 0%,
+      hsl(177.27,21.271%,32.06%) 5.5%,
+      hsl(176.67,34.1%,36.88%) 12.1%,
+      hsl(176.61,42.28%,40.7%) 19.6%,
+      hsl(176.63,48.32%,43.88%) 27.9%,
+      hsl(176.66,53.07%,46.58%) 36.6%,
+      hsl(176.7,56.94%,48.91%) 45.6%,
+      hsl(176.74,62.39%,50.91%) 54.6%,
+      hsl(176.77,69.86%,52.62%) 63.4%,
+      hsl(176.8,76.78%,54.08%) 71.4%,
+      hsl(176.83,83.02%,55.29%) 79.4%,
+      hsl(176.85,88.44%,56.28%) 86.2%,
+      hsl(176.86,92.9%,57.04%) 91.9%,
+      hsl(176.88,96.24%,57.59%) 96.3%,
+      hsl(176.88,98.34%,57.93%) 99%,
+      hsl(176.89,99.07%,58.04%) 100%
+      );
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: black;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    
+    .side:nth-child(1) { transform: rotateX(90deg) translateZ(125px); }
+    .side:nth-child(2) { transform: rotateX(-90deg) translateZ(125px); } 
+    .side:nth-child(3) { transform: rotateY(90deg) translateZ(125px); }
+    .side:nth-child(4) { transform: rotateY(-90deg) translateZ(125px); }
+    .side:nth-child(5) { transform: rotateY(180deg) translateZ(125px); }
+    .side:nth-child(6) { transform: rotateY(0deg) translateZ(125px); } 
+  }
+    @keyframes rotate-cube {
+      0%{
+      transform: rotateX(-10deg)rotateY(0deg);    
+  }
+  100%{
+      transform: rotateX(10deg)rotateY(360deg);    
+  }
+  }
+
+.front {
+    background-image: url('/members/EBimg.jpg');
+    background-size: cover;
+    transform: translateZ(100px);
+}
+
+.back {
+    background-image: url('/members/EBimg.jpg');
+    background-size: cover;
+    transform: translateZ(-100px) rotateY(180deg);
+}
+
+.right {
+    background-image: url('/members/EBimg.jpg');
+    background-size: cover;
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.left {
+    background-image: url('/members/EBimg.jpg');
+    background-size: cover;
+    transform: rotateY(90deg) translateZ(100px);
+}
+.top{
+    background: hsl(47, 10%, 83%);
+    
+}
+

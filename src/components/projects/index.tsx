@@ -6,12 +6,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "@/styles/custom_slider.css";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Pagination, Autoplay ,Mousewheel} from "swiper/modules";
 import { f_amaranth_400, f_alata_400 } from "@/styles/fonts";
 import { ImageType } from "@/types/Image";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 import { Images_Projects } from "./projects_data";
 import Image from "next/image";
+import styles from './styles.module.css'
+import { FaForward, FaHandPointLeft, FaHandPointRight, FaReply, FaShare } from "react-icons/fa";
 
 const projects = () => {
   return (
@@ -36,17 +38,17 @@ const CustomSlider = (props: Props) => {
 
   useEffect(() => {
     const checkIsDesktop = () => {
-      setIsDesktop(window.matchMedia("(min-width: 960px)").matches);
+      setIsDesktop(window.matchMedia("(min-width: 900px)").matches);
     };
     const checkIsTablet = () => {
-      setIsTablet(window.matchMedia("(min-width: 700px)").matches);
+      setIsTablet(window.matchMedia("(min-width: 500px)").matches);
     };
 
     checkIsDesktop();
     checkIsTablet();
 
-    const mediaQuery_desktop = window.matchMedia("(min-width: 960px)");
-    const mediaQuery_tablet = window.matchMedia("(min-width: 700px)");
+    const mediaQuery_desktop = window.matchMedia("(min-width: 900px)");
+    const mediaQuery_tablet = window.matchMedia("(min-width: 600px)");
     const handleResize_desktop = () => {
       setIsDesktop(mediaQuery_desktop.matches);
     };
@@ -61,83 +63,109 @@ const CustomSlider = (props: Props) => {
       mediaQuery_tablet.removeEventListener("change", handleResize_tablet);
     };
   }, []);
-
+ 
   return (
-    <>
-      <div className="w-full p-1 md:p-5 flex flex-col items-center my-10 md:my-12 relative">
+    <div className={styles.body}>
+      <div className={styles.background}>
         <h1
-          className={`text-5xl md:text-7xl font-extrabold text-white my-1 md:leading-3 tracking-tight ${f_alata_400.className} p-1 my-2 md:p-5 md:my-5 text-wrap`}
+          className={`text-5xl md:text-7xl font-extrabold text-white z-10 my-1  md:leading-3 tracking-tight ${f_alata_400.className} p-1 my-2 md:p-5 md:my-5 text-wrap`}
           style={{
             WebkitTextStroke: "2.5px black",
           }}
         >
-          {props.title}
+           <span className={styles.span} style={{ '--i': 0 } as React.CSSProperties}>P</span>
+          <span className={styles.span} style={{ '--i': 1} as React.CSSProperties}>R</span>
+          <span className={styles.span} style={{ '--i': 2 } as React.CSSProperties}>O</span>
+          <span className={styles.span} style={{ '--i': 3 } as React.CSSProperties}>J</span>
+          <span className={styles.span} style={{ '--i': 4 } as React.CSSProperties}>E</span>
+          <span className={styles.span} style={{ '--i': 5 } as React.CSSProperties}>C</span>
+          <span className={styles.span} style={{ '--i': 6 } as React.CSSProperties}>T</span>
+          <span className={styles.span} style={{ '--i': 7 } as React.CSSProperties}>S</span>
+          {/* {props.title} */}
         </h1>
-
-        <div className="py-1 px-5 md:px-14 my-5 w-full h-full relative">
-          <Swiper
-            effect={"fade"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={isDesktop ? 3 : isTablet ? 2 : 1}
-            spaceBetween={30}
-            autoplay={{ delay: 2500 }}
-            loop={true}
-            zoom={true}
-            pagination={{
-              clickable: true,
-              renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + "</span>";
-              },
-            }}
-            navigation={{
-              prevEl: ".prev",
-              nextEl: ".next",
-            }}
-            modules={[Navigation, Pagination, Autoplay]}
-            className="w-full h-full my-5"
-            simulateTouch={true}
-          >
-            {props.images.map((image, i) => (
-              <SwiperSlide
-                key={i}
-                className="bg-black border-4 border-solid border-white w-full h-full text-white flex items-center"
-              >
-                <h5
-                  className={`${f_amaranth_400.className} text-nowrap text-2xl font-normal text-white text-center w-full bg-black p-5`}
-                >
-                  {image.title}
-                </h5>
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={150}
-                  height={100}
-                  className="w-full h-72 pt-5 pb-2 px-2"
-                />
-              </SwiperSlide>
-            ))}
-            <SlideNavigationButtons />
-          </Swiper>
+        <div>
+          
+          <div className={styles.newsslider}>
+            <Swiper
+              lazyPreloadPrevNext={3}
+              mousewheel={
+                {thresholdDelta: 50}
+              }
+              effect={'fade'}
+              grabCursor={true}
+              centeredSlides={isDesktop?true : isTablet? false:true}
+              slidesPerView={isDesktop ? 3 : isTablet ? 2 : 1}
+              spaceBetween={30}
+              autoplay={{ delay: 2000 }}
+              loop={true}
+              zoom={{maxRatio:2}}       
+              pagination={{
+                el: ".swiper-pagination",
+                clickable: true,
+                bulletClass: styles.paginationbullet,
+                bulletActiveClass: styles.paginationbulletactive,
+                renderBullet: function (index, className) {
+                  return `${<span key={index} className={`${className} ${styles.paginationbullet}`} />}`;
+                },
+              }}
+              
+              navigation={{
+                prevEl: ".prev",
+                nextEl: ".next",
+              }}
+              modules={[Navigation, Pagination, Autoplay,Mousewheel]}
+              className={styles.swipercontainer}
+              simulateTouch={true}
+            >
+              <div className={`${styles.newssliderwrp}`}>
+                {props.images.map((image, i) => (
+                  <SwiperSlide
+                    key={i}
+                    className={`${styles.newsslideritem} ${styles.swiperslide}`}
+                  >
+                    <div className={styles.newsitem}>
+                      <h5
+                        className={styles.newstitle}
+                      >
+                        {image.title}
+                      </h5>
+                      <h3 className={styles.newstxt}>{image.content}</h3>
+                      <div className={styles.newsimg}>
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          width={500}
+                          height={100}
+                          className={styles.img}
+                        />
+                    </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </div>
+              <SlideNavigationButtons />
+            </Swiper>
+            </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
 const SlideNavigationButtons = () => {
   const swiper = useSwiper();
 
-  const btnStyles = `p-1 sm:p-2 md:p-3 rounded-full bg-white w-fit cursor-pointer border-2 md:border-4 border-solid border-black`;
-  const iconStyles = `font-black text-black text-sm sm:text-base md:text-xl`;
+  const btnStyles = `m-2 p-1 sm:p-2 md:p-2 w-[50px] h-[50px] rounded-full cursor-pointer  border-2 hover:md:border-4 border-solid border-black hover:scale-75 bg-white active:scale-110`;
+  const iconStyles = `text-lg sm:text-sm text-black text-black  md:text-3xl`;
 
   return (
-    <div className="hidden md:flex w-full items-center justify-between absolute my-10 left-0 bottom-1/2 translate-y-1/2 z-10">
+    <div className="flex justify-center md:flex  pt-12 md:justify-center  z-10">
       <div className={`prev ${btnStyles}`} onClick={() => swiper.slidePrev(1)}>
-        <FaArrowLeftLong className={`${iconStyles}`} />
+        <FaHandPointLeft className={`${iconStyles}`} />
       </div>
+      {/* <div className={styles.pagination}   ></div> */}
       <div className={`next ${btnStyles}`} onClick={() => swiper.slideNext()}>
-        <FaArrowRightLong className={`${iconStyles}`} />
+        <FaHandPointRight className={`${iconStyles}`} />
       </div>
     </div>
   );

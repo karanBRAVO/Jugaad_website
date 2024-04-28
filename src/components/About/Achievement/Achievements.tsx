@@ -7,38 +7,23 @@ import "@/styles/flip_card.css";
 const Achievements = () => {
   return (
     <>
-      <div className="w-full flex flex-col items-center py-5 px-4">
+      <div className="w-full flex flex-col items-center  gap-16 py-5 px-4 my-10 mb-20">
         <h1
-          className={`capitalize text-white my-4 mx-1 py-2 px-1 text-5xl md:text-6xl leading-none tracking-normal ${f_alata_400.className}`}
-          style={{
-            WebkitTextStrokeWidth: 3,
-            WebkitTextStrokeColor: "#000",
-          }}
+          className={`capitalize text-white  mx-1 px-1 text-[2.8rem] sm:text-5xl md:text-6xl leading-none tracking-normal ${f_alata_400.className}`}
         >
           Achievements
         </h1>
-        <div className="flex flex-row items-center flex-wrap justify-evenly w-full my-2 gap-8">
+        <div className="flex flex-col sm:flex-row items-center  flex-wrap justify-evenly w-full my-2 ">
           {AchievementsImages.map((image, index) => (
-            <div className="flip-card w-[320px] h-[400px]" key={index}>
-              <div className="flip-card-inner w-full h-full">
-                <div className="flip-card-front w-full h-full">
-                  <Image
-                    src={image.front.src}
-                    alt={image.front.alt}
-                    width={200}
-                    height={200}
-                    draggable={false}
-                    className={`w-full h-full border-4 rounded-lg border-solid border-white`}
-                  />
-                </div>
-                <div className="flip-card-back w-full h-full flex flex-col items-center justify-center bg-black">
+            <div className=" w-[87%]  sm:w-[455px] my-6 h-max" key={index} >
+                <div className=" w-full h-full flex flex-col sm:flex-row gap-6 items-center rounded-2xl justify-center border-2 border-white py-4 px-8 bg-stone-700">
                   <Image
                     src={image.back.src}
                     alt={image.back.alt}
-                    width={300}
-                    height={300}
+                    width={800}
+                    height={400}
                     draggable={false}
-                    className={`w-full h-[80%] px-5 py-4`}
+                    className={`w-[230px] h-[180px] sm:w-[190px] sm:h-[200px] border-2 border-black shadow-black shadow-lg rounded-lg`}
                   />
                   <p
                     className={`text-white text-sm ${f_alata_400} text-center w-full rounded-md`}
@@ -46,7 +31,6 @@ const Achievements = () => {
                     {image.back.title}
                   </p>
                 </div>
-              </div>
             </div>
           ))}
         </div>

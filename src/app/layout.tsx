@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Commons from "./Commons";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Jugaad",
-  description: "UIET Jugaad Club",
+  title: "Jugaad - Robotic club of UIET",
+  description:
+    " Jugaad Club, the premier robotics club of UIET, Panjab University, Chandigarh",
 };
 
 export default function RootLayout({
@@ -14,7 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-parallax bg-no-repeat bg-cover">
+      <body>
+        <Toaster position="bottom-right" />
         <Commons>{children}</Commons>
       </body>
     </html>

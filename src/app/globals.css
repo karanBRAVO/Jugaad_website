@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 * {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(217, 217, 217, 0) black;
+  scrollbar-width: none;
+  scrollbar-color: transparent !important;
   scroll-behavior: smooth;
   text-decoration: none;
   list-style-type: none;
+  transition:.5s
 }
 
 *::-webkit-scrollbar {
@@ -16,13 +17,13 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: black;
+  background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(217, 217, 217, 0.4);
+  background-color: transparent;
   border-radius: 20px;
-  border: 3px solid rgba(217, 217, 217, 0.4);
+  border: 3px solid transparent !important;
 }
 
 html,
